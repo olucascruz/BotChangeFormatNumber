@@ -22,6 +22,7 @@ def main():
     change_separator(bot,".", ",")
     bot.wait(2000)
     change_separator(bot,",", ".")
+    
 
     
 

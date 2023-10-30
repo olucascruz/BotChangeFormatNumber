@@ -1,3 +1,4 @@
+import pygetwindow as gw
 
 def change_separator(bot, separator_1, separator_2):
     bot.type_keys(["win", "r"])
@@ -19,6 +20,17 @@ def change_separator(bot, separator_1, separator_2):
     bot.tab(presses=12)
     bot.enter()
     bot.wait(1500)
+    window_title = "Personalizar Formato"
+
+    window = gw.getWindowsWithTitle(window_title)
+    if window:
+    # Traga a janela para o primeiro plano.
+        window[0].activate()
+    else:
+        print("Janela não encontrada.")
+
+
+
     bot.tab(presses=12)
     bot.wait(2000)
     bot.enter()
